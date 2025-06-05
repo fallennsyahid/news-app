@@ -34,7 +34,6 @@ async function searchNews() {
       error.value = "No result found";
     }
   } catch (err) {
-    error.value = "Error fetching news";
     console.error(err);
   } finally {
     loading.value = false;
@@ -69,7 +68,13 @@ async function searchNews() {
   </div>
   <div class="border-t-2 block mx-4"></div>
 
-  <div v-if="error">{{ error }}</div>
+  <div v-if="error" class="flex justify-center mt-6">
+    <span
+      class="bg-red-100 text-red-700 px-6 py-3 rounded-lg shadow font-semibold text-lg"
+    >
+      {{ error }}
+    </span>
+  </div>
 
   <div v-if="loading" class="flex justify-center items-center mt-10 min-h-50">
     <div class="loader"></div>
