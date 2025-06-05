@@ -23,7 +23,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <span class="screen-widget"></span>
+  <!-- <span class="screen-widget"></span> -->
   <Navbar />
   <HeroSection />
   <div class="mx-auto p-4 sm:p-6 max-w-full" id="news-list">
@@ -99,7 +99,7 @@ onMounted(async () => {
   }
 }
 
-.screen-widget {
+/* .screen-widget {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -146,5 +146,5 @@ onMounted(async () => {
   .screen-widget::after {
     content: "screen: 2xl";
   }
-}
+} */
 </style>
